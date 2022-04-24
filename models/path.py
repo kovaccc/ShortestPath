@@ -8,7 +8,7 @@ class Path:
     def toString(self):
         return "Path(currentCity: " + str(self.currentCity.name) + ", visitedCities: " \
                + str([CITY.name for CITY in self.visitedCities]) + ", distanceProgress: " + str(
-            self.distanceProgress) + ") "
+            self.distanceProgress) + ")"
 
     def __lt__(self, other):
         return self.priority < other.priority
@@ -21,4 +21,3 @@ class Path:
 
     def __ge__(self, other):
         return self.priority >= other.priority
-

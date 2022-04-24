@@ -6,4 +6,3 @@ class Road:
     def toString(self):
         return "Road(endCity: " + str(self.endCity.toString()) + ", cost: " \
                + str(self.cost) + ")"
-

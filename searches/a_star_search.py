@@ -20,4 +20,3 @@ def a_star_search(cities, start, end):
                          distance_progress=path.distanceProgress + road.cost,
                          priority=path.distanceProgress + road.endCity.straightLineDistance))
     return Path(None, [], 0, 0)
-

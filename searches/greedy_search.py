@@ -19,6 +19,4 @@ def greedy_best_first_search(cities, start, end):
                          visited_cities=path.visitedCities + [path.currentCity],
                          distance_progress=path.distanceProgress + road.cost,
                          priority=road.endCity.straightLineDistance))
-
     return Path(None, [], 0, 0)
-

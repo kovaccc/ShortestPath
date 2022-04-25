@@ -3,15 +3,15 @@ from models.city import City
 from searches.greedy_search import greedy_best_first_search
 from models.road import Road
 
-with open('resources/Assignment 1 Spain map.txt') as knapsackFile:
-    knapsack_file_lines = knapsackFile.readlines()
+with open('resources/Assignment 1 Spain map.txt') as shortestPathFile:
+    shortest_path_file_lines = shortestPathFile.readlines()
     cities = []
 
-    for line in knapsack_file_lines[85:len(knapsack_file_lines)]:
+    for line in shortest_path_file_lines[85:len(shortest_path_file_lines)]:
         cityLine = [str(i) for i in line.split(" ")]
         cities.append(City(cityLine[0], int(cityLine[1])))
 
-    for line in knapsack_file_lines[5:82]:
+    for line in shortest_path_file_lines[5:82]:
         roadLine = [str(i) for i in line.split(" ")]
         for city in cities:
             if city.name == roadLine[0]:
